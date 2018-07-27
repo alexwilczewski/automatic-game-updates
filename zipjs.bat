@@ -65,6 +65,7 @@ var SLEEP_INTERVAL=200;
 
 //copy option(s) used by Shell.Application.CopyHere/MoveHere
 var NO_PROGRESS_BAR=4;
+var FORCE_YES_TO_ALL=16;
 
 
 //oprions used for zip/unzip
@@ -591,16 +592,16 @@ if ( ! this.ZIPUtils.UnzipItem) {
 			return;
 		}
 		
-		if (Scripting.FileSystemObject.ExistsItem(destination) && force ) {
-			Scripting.FileSystemObject.DeleteItem(destination);
-		} else if (Scripting.FileSystemObject.ExistsItem(destination)){
-			WScript.Echo(destination+" - Destination already exists");
-			return;
-		} 
+//		if (Scripting.FileSystemObject.ExistsItem(destination) && force ) {
+//			Scripting.FileSystemObject.DeleteItem(destination);
+//		} else if (Scripting.FileSystemObject.ExistsItem(destination)){
+//			WScript.Echo(destination+" - Destination already exists");
+//			return;
+//		} 
 		
-		Scripting.FileSystemObject.CreateFolder(destination);
+//		Scripting.FileSystemObject.CreateFolder(destination);
 		destination=Scripting.FileSystemObject.getFullPath(destination);
-		Shell.Application.ProcessItem(source, destination, move ,false,NO_PROGRESS_BAR);
+		Shell.Application.ProcessItem(source, destination, move ,false,FORCE_YES_TO_ALL);
 		                            
     }		
 }
