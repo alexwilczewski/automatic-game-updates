@@ -1,0 +1,10 @@
+*
+!.gitignore
+!games.conf.example
+!generate-steam-update-script.cmd
+!create-conf.cmd
+!server-script.cmd
+!steamcmd.exe
+!zip-games.cmd
+!zipjs.bat
+!unzip-games.cmd
