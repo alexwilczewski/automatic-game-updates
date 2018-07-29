@@ -22,5 +22,5 @@ EXIT /B 0
 :givenpull
 SET from=%1
 SET to=%2
-CALL %sevenzip% e %usezip% %from% -so | %sevenzip% x -si -ttar -o%to%
+CALL %sevenzip% e %usezip% %from% -so | %sevenzip% x -y -si -ttar -o%to%
 EXIT /B 0

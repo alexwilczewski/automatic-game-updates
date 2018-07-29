@@ -2,6 +2,7 @@
 !/steam-update-scripts/DO_NOT_REMOVE
 !/.gitignore
 !/7za.exe
+!/client-script.cmd
 !/games.conf.example
 !/generate-steam-update-script.cmd
 !/server-script.cmd
