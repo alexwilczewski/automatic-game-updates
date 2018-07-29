@@ -1,10 +1,12 @@
 /*
 !/steam-update-scripts/DO_NOT_REMOVE
 !/.gitignore
+!/7za.exe
 !/games.conf.example
 !/generate-steam-update-script.cmd
 !/server-script.cmd
 !/steamcmd.exe
 !/unzip-games.cmd
+!/unzipping.conf.example
 !/zip-games.cmd
-!/zipjs.bat
+!/zipping.conf.example
