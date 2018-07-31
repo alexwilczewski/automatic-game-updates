@@ -1,6 +1,6 @@
 @ECHO OFF
 SET readin=%1
-SET outdir=%2
+SET outdir=%~2
 SET loginprefix=:
 SET gameprefix=-
 SET isbuildingconf=0
@@ -34,7 +34,7 @@ ECHO quit >> %currentfile%
 EXIT /B 0
 
 :setnewfile
-SET currentfile=%outdir%\%1.script
+SET currentfile="%outdir%\%1.script"
 EXIT /B 0
 
 :startconf

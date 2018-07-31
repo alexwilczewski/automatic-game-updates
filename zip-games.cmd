@@ -1,7 +1,7 @@
 @ECHO OFF
 SET cwd=%~dp0
 SET readin=%1
-SET sevenzip=%cwd%7za.exe
+SET sevenzip="%cwd%7za.exe"
 SET storezipprefix=">"
 SET addprefix="<"
 SET storezip=
