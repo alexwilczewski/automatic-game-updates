@@ -5,7 +5,7 @@ SET loginprefix=:
 SET gameprefix=-
 SET isbuildingconf=0
 SET currentconffile=
-FOR /F "eol=; tokens=1,2* delims= " %%a IN (%readin%) DO (
+FOR /F "usebackq eol=; tokens=1,2* delims= " %%a IN (%readin%) DO (
   IF %%a==%loginprefix% (
 	CALL :givenlogin %%b %%c
   )
