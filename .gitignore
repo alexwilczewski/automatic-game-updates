@@ -2,6 +2,7 @@
 !/steam-update-scripts/DO_NOT_REMOVE
 /steamcmd/*
 !/steamcmd/steamcmd.exe
+/nginx-1.15.2/conf/nginx.conf
 /nginx-1.15.2/logs/*
 !/nginx-1.15.2/logs/DO_NOT_REMOVE
 /nginx-1.15.2/temp/*
