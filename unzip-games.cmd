@@ -13,6 +13,7 @@ FOR /F "usebackq eol=; tokens=1,2,3* delims=|" %%a IN (%readin%) DO (
     CALL :givenpull "%%b" "%%c"
   )
 )
+CALL :cleanupzip
 EXIT /B 0
 
 :givenusezip
@@ -28,4 +29,8 @@ EXIT /B 0
 SET from=%1
 SET to=%2
 CALL %sevenzip% e %ziptmpfile% %from% -so | %sevenzip% x -y -si -ttar -o%to%
+EXIT /B 0
+
+:cleanupzip
+CALL DEL %ziptmpfile%
 EXIT /B 0
