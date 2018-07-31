@@ -7,3 +7,4 @@ SET log="%cwd%server.log"
 CALL "%cwd%generate-steam-update-script.cmd" %inputgames% %steamupdatescriptsdir% > %log% 2>&1
 CALL "%cwd%run-steam-update-scripts.cmd" %steamupdatescriptsdir% >> %log% 2>&1
 CALL "%cwd%zip-games.cmd" %inputzips% >> %log% 2>&1
+CALL "%cwd%keep-alive-webserver.cmd" >> %log% 2>&1

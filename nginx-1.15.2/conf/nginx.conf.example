@@ -5,15 +5,15 @@ events {
 }
 
 http {
-    default_type  application/octet-stream;
-    sendfile        on;
+    default_type application/octet-stream;
+    sendfile on;
     keepalive_timeout  65;
     gzip  on;
     server {
         listen       80;
         server_name  localhost;
         location / {
-            root   C:\GameCafe;
+            root C:\GameCafe;
         }
     }
 }
