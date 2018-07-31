@@ -5,7 +5,7 @@ SET sevenzip="%cwd%7za.exe"
 SET usezipprefix="<"
 SET pullprefix=">"
 SET usezip=
-FOR /F "eol=; tokens=1,2,3* delims=|" %%a IN (%readin%) DO (
+FOR /F "usebackq eol=; tokens=1,2,3* delims=|" %%a IN (%readin%) DO (
   IF "%%a"==%usezipprefix% (
     CALL :givenusezip "%%b"
   )

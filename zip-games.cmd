@@ -5,7 +5,7 @@ SET sevenzip="%cwd%7za.exe"
 SET storezipprefix=">"
 SET addprefix="<"
 SET storezip=
-FOR /F "eol=; tokens=1,2,3* delims=|" %%a IN (%readin%) DO (
+FOR /F "usebackq eol=; tokens=1,2,3* delims=|" %%a IN (%readin%) DO (
   IF "%%a"==%storezipprefix% (
     CALL :givenstore "%%b"
 	CALL :resetstore

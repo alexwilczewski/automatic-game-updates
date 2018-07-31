@@ -2,6 +2,9 @@
 !/steam-update-scripts/DO_NOT_REMOVE
 /steamcmd/*
 !/steamcmd/steamcmd.exe
+/client.log
 /games.conf
+/server.log
 /unzipping.conf
+/ZippedGames.7z
 /zipping.conf
