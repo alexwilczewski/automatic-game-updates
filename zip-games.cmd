@@ -29,5 +29,5 @@ EXIT /B 0
 :ziprecursive
 SET systemlocation=%1
 SET output=%2
-CALL %sevenzip% a -y -ur2y2 %output% %systemlocation%
+CALL %sevenzip% a -y -up1q1r2x1y2z1w2 %output% %systemlocation%
 EXIT /B 0
