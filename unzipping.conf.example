@@ -1,3 +1,2 @@
-<|http://127.0.0.1/ZippedGames.7z
->|Steam.tar|C:\Program Files\steam
->|Lol.tar|C:\LoL
+http://127.0.0.1/steamapps.7z|C:\Program Files\steam\steamapps
+http://127.0.0.1/broforce.7z|C:\Program Files\steam\steamapps
