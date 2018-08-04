@@ -1,15 +1,5 @@
 /steam-update-scripts/*
 !/steam-update-scripts/DO_NOT_REMOVE
-/steamcmd/*
-!/steamcmd/steamcmd.exe
-/nginx-1.15.2/conf/nginx.conf
-/nginx-1.15.2/logs/*
-!/nginx-1.15.2/logs/DO_NOT_REMOVE
-/nginx-1.15.2/temp/*
-!/nginx-1.15.2/temp/DO_NOT_REMOVE
-/client.log
 /games.conf
 /server.log
-/unzipping.conf
-/ZippedGames.7z
-/zipping.conf
+/steamcmd.conf
