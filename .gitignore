@@ -1,5 +1,6 @@
 /steam-update-scripts/*
 !/steam-update-scripts/DO_NOT_REMOVE
 /games.conf
+/nonsteam.conf
 /server.log
 /steamcmd.conf
