@@ -1,7 +1,8 @@
 @ECHO OFF
 SET cwd=%~dp0
 SET readin=%1
-SET execstabilizesec=60
+REM 60 (s) * 60 (m) = 3600 (1h)
+SET execwaittimeseconds=3600
 FOR /F "usebackq eol=; tokens=1,2,3 delims=|" %%a IN (%readin%) DO (
     CALL :givenline "%%a" "%%b" %%c
 )
@@ -13,9 +14,7 @@ SET watchingdir=%2
 SET execname=%3
 ECHO "Start runnable: %runnable%"
 START "" /B %runnable%
-ECHO "Wait for exec to stabilize (s): %execstabilizesec%"
-TIMEOUT %execstabilizesec%
-ECHO "Start file watcher"
-cscript.exe /nologo "%cwd%wait-for-file-stabilization.vbs" %watchingdir%
+ECHO "Give time for downloads (s): %execwaittimeseconds%"
+TIMEOUT %execwaittimeseconds%
 TASKKILL /FI "imagename eq %execname%" /T /F
 EXIT /B 0
