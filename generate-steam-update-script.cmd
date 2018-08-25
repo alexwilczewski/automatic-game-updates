@@ -1,13 +1,14 @@
 @ECHO OFF
 SET readin=%1
 SET outdir=%~2
+SET SteamProgramDir=%~3
 SET loginprefix=:
 SET gameprefix=-
 SET isbuildingconf=0
 SET currentconffile=
 FOR /F "usebackq eol=; tokens=1,2* delims= " %%a IN (%readin%) DO (
   IF %%a==%loginprefix% (
-	CALL :givenlogin %%b %%c
+	  CALL :givenlogin %%b %%c
   )
   IF %%a==%gameprefix% (
     CALL :givengame %%b "%%c"
@@ -27,6 +28,7 @@ IF %isbuildingconf% EQU 1 (
 CALL :setnewfile %login%
 CALL :startconf
 CALL :addlogin %login% %password%
+CALL :AddInstallDir
 EXIT /B 0
 
 :closeconf
@@ -47,6 +49,10 @@ EXIT /B 0
 SET login=%1
 SET password=%2
 ECHO login %login% %password% >> %currentfile%
+EXIT /B 0
+
+:AddInstallDir
+ECHO force_install_dir "%SteamProgramDir%" >> %currentfile%
 EXIT /B 0
 
 :givengame

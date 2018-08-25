@@ -1,0 +1,4 @@
+@ECHO OFF
+SET SteamCmdDir=C:\GameCafe\steamcmd
+SET SteamProgramDir=C:\Program Files\Steam
+EXIT /B 0

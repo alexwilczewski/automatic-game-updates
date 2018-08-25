@@ -1,7 +1,9 @@
 @ECHO OFF
-SET steamcmdconf=%1
+SET serverconf=%1
 SET scriptdir=%~2
-SET /p steamcmd=<%steamcmdconf%
+CALL %serverconf%
+SET steamcmd="%SteamCmdDir%\steamcmd.exe"
 FOR %%a IN ("%scriptdir%\*.script") DO (
-  CALL "%steamcmd%" +runscript "%%a"
+  CALL %steamcmd% +runscript "%%a"
 )
+EXIT /B 0
