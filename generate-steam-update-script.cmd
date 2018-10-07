@@ -10,7 +10,7 @@ FOR /F "usebackq eol=; tokens=1,2,3,4 delims=|" %%a IN (%readin%) DO (
 	  CALL :givenlogin %%b %%c
   )
   IF %%a==%gameprefix% (
-    CALL :givengame %%b %%c %%d
+    CALL :givengame %%b "%%c" "%%d"
   )
 )
 IF %isbuildingconf% EQU 1 (
@@ -51,15 +51,15 @@ EXIT /B 0
 
 :givengame
 SET gcode=%1
-SET gname=%2
-SET ginstalldir=%3
-CALL :AddInstallDirCommand %ginstalldir%
+SET gname=%~2
+SET ginstalldir=%~3
+CALL :AddInstallDirCommand "%ginstalldir%"
 CALL :AddInstallGameCommand %gcode%
-CALL :PrintGameMapLog %gcode% %gname%
+CALL :PrintGameMapLog %gcode% "%gname%"
 EXIT /B 0
 
 :AddInstallDirCommand
-SET installdir=%1
+SET installdir=%~1
 ECHO force_install_dir "%installdir%" >> %currentfile%
 EXIT /B 0
 
@@ -70,6 +70,6 @@ EXIT /B 0
 
 :PrintGameMapLog
 SET gcode=%1
-SET gname=%2
+SET gname=%~2
 ECHO %gcode% -- %gname%
 EXIT /B 0
