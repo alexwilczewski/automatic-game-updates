@@ -2,6 +2,5 @@
 SET serverconf=%1
 CALL %serverconf%
 SET SteamCmdConfigDir=%SteamCmdDir%\config
-SET SteamProgramConfigDir=%SteamProgramDir%\config
-CALL xcopy /y "%SteamProgramConfigDir%\config.vdf" "%SteamCmdConfigDir%\config.vdf"
+CALL xcopy /y "%SteamProgramConfigFile%" "%SteamCmdConfigDir%\config.vdf"
 EXIT /B 0

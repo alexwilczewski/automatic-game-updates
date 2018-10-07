@@ -1,3 +1,4 @@
 @ECHO OFF
 SET SteamCmdDir=C:\GameCafe\steamcmd
+SET SteamProgramConfigFile=C:\Program Files\Steam\config\config.vdf
 EXIT /B 0
