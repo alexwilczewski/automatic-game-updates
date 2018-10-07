@@ -1,5 +1,5 @@
-: username password
-- 250760 Shovel Knight Treasure Trove
-- 0000 Game #2
-: username2 password2
-- 274190 Broforce
+:|username|password|
+-|250760|Shovel Knight Treasure Trove|C:\Program Files (x86)\Steam\steamapps\common\Shovel Knight
+-|Game ID from Steam Store|Title of Game #2 for logging|Path\To\Directory
+:|username2|password2|
+-|274190|Broforce|C:\Program Files (x86)\Steam\steamapps\common\Broforce

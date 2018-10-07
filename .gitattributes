@@ -1,3 +1,3 @@
-# Set the default behavior, in case people don't have core.autocrlf set.
 *.cmd text eol=crlf
 *.conf.example text eol=crlf
+*.cmd.example text eol=crlf
